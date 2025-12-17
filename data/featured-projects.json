@@ -1,0 +1,32 @@
+{
+  "featuredProjects": [
+    {
+      "id": "construclick",
+      "title": "Construclick",
+      "category": "SaaS IA",
+      "description": "Mais do que um sistema, uma ferramenta de economia. Implementei a lógica que conecta construtoras aos menores preços automaticamente, usando IA para processar dados que humanos levariam dias para analisar.",
+      "image": "/images/projects/construclick.png",
+      "link": "https://construclick.ai/login",
+      "tags": ["Next.js", "IA", "Python", "PostgreSQL"]
+    },
+    {
+      "id": "e-siri",
+      "title": "E-Siri",
+      "category": "GovTech",
+      "description": "O desafio era criar algo robusto o suficiente para 200 mil cidadãos, mas simples de usar. Trabalhei na arquitetura para garantir que o sistema nunca caísse, mesmo em dias de picos de acesso do governo.",
+      "image": "/images/projects/e-siri.png",
+      "link": "https://e-siri.com/",
+      "tags": ["React", "Node.js", "AWS", "PostgreSQL"]
+    },
+    {
+      "id": "ananda",
+      "title": "Ananda Health",
+      "category": "E-commerce B2B",
+      "description": "Plataforma completa para distribuidora farmacêutica americana. O site antigo era lento e perdia vendas. Reescrevi o front-end focando em performance real, resultando em aumento mensurável de conversão.",
+      "image": "/images/projects/ananda.png",
+      "link": "https://anandahealth.thegoodmonster.com/",
+      "complianceText": "Projeto sob NDA - detalhes limitados",
+      "tags": ["Next.js", "TypeScript", "Stripe", "Vercel"]
+    }
+  ]
+}
