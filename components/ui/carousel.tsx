@@ -197,8 +197,6 @@ const CarouselDots = React.forwardRef<
     setScrollSnaps(carouselApi.scrollSnapList())
     carouselApi.on("select", onSelect)
     onSelect()
-
-    return () => carouselApi.off("select", onSelect)
   }, [carouselApi, onSelect])
 
   return (

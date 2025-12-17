@@ -7,7 +7,21 @@ import { ArrowRight, MessageCircle, Download, Briefcase } from "lucide-react"
 import { useVisitor } from "@/contexts/visitor-context"
 import { AnimatedParticles } from "@/components/animated-particles"
 
-const recruiterContent = {
+interface CtaButton {
+  text: string
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+  download?: boolean
+}
+
+interface Content {
+  headline: string
+  subheadline: string
+  primaryCta: CtaButton
+  secondaryCta: CtaButton
+}
+
+const recruiterContent: Content = {
   headline: "Desenvolvedor Full Stack focado em Engenharia de Software, Qualidade e Colaboração.",
   subheadline:
     "Especialista em React, Node.js e Ecossistema TypeScript. Com 2 anos de experiência prática transformando requisitos em software limpo, testável e escalável — de projetos independentes a sistemas governamentais de alta demanda.",
@@ -15,7 +29,7 @@ const recruiterContent = {
   secondaryCta: { text: "Baixar Currículo (PDF)", href: "/cv-daniel-fernando.pdf", icon: Download, download: true },
 }
 
-const businessContent = {
+const businessContent: Content = {
   headline: "Transformo suas ideias em Software de Alto Nível: De Landing Pages a Sistemas Complexos.",
   subheadline:
     "Vamos juntos criar soluções digitais que vendem, escalam e funcionam.",

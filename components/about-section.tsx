@@ -46,7 +46,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   },
 }
 
@@ -56,7 +56,7 @@ const photoVariants = {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
   },
 }
 
@@ -65,7 +65,7 @@ const metricVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: "spring", stiffness: 200, damping: 15 },
+    transition: { type: "spring" as const, stiffness: 200, damping: 15 },
   },
 }
 
@@ -105,10 +105,8 @@ export function AboutSection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="grid lg:grid-cols-12 gap-6 lg:gap-8">
-              {/* Left column - Photo with glow */}
               <motion.div variants={photoVariants} className="lg:col-span-5 flex justify-center lg:justify-start">
                 <div className="relative">
-                  {/* Animated glow behind photo */}
                   <motion.div
                     className="absolute -inset-4 bg-gradient-to-br from-primary/30 via-primary/20 to-transparent rounded-3xl blur-2xl"
                     animate={
@@ -122,9 +120,7 @@ export function AboutSection() {
                     transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                   />
 
-                  {/* Photo frame with decorative border */}
                   <div className="relative w-64 h-80 lg:w-72 lg:h-96 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl shadow-primary/20">
-                    {/* Decorative corner elements */}
                     <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary rounded-tl-lg" />
                     <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary rounded-tr-lg" />
                     <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary rounded-bl-lg" />
@@ -138,13 +134,11 @@ export function AboutSection() {
                       priority
                     />
 
-                    {/* Gradient overlay at bottom */}
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
                 </div>
               </motion.div>
 
-              {/* Right column - Content */}
               <div className="lg:col-span-7 flex flex-col justify-center">
                 <motion.span
                   variants={itemVariants}
