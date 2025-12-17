@@ -2,10 +2,6 @@
 
 Um portfólio profissional moderno construído com Next.js 15, React 19 e Tailwind CSS v4. O site apresenta duas experiências personalizadas baseadas no tipo de visitante (recrutador ou cliente empresarial), com animações fluidas e design glassmorphism premium.
 
-## Preview
-
-![Portfolio Preview](/public/images/daniel-profile.png)
-
 ## Funcionalidades
 
 ### Sistema de Landing Pages Duais
